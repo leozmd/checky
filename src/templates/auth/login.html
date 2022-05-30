@@ -87,7 +87,8 @@
             style="width: 1100px; box-shadow: 0px 3px 9px #565656"
           >
             <img class="profile-img-card" src="assets/img/img_login.svg" />
-            <form class="form-signin" action="index">
+            <form class="form-signin" action="login" method="post">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
               <span class="reauth-email"> </span
               ><input
                 class="form-control"
@@ -97,7 +98,7 @@
                 placeholder="Nombre de usuario"
                 autofocus=""
                 style="font-family: 'Red Hat Text', sans-serif"
-                name="user"
+                name="usuUsuario"
               /><input
                 class="form-control"
                 type="password"
@@ -105,7 +106,7 @@
                 required=""
                 placeholder="Contraseña"
                 style="font-family: 'Red Hat Text', sans-serif"
-                name="pass"
+                name="passUsuario"
               />
               <div class="checkbox"></div>
               <button

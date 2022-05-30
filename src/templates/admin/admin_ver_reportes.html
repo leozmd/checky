@@ -1,0 +1,43 @@
+{% extends 'admin/base_admin.html' %}
+{% block title %}Panel de administración{% endblock %}
+{% block body %}
+    <div
+      class="text-center d-lg-flex flex-column align-items-lg-center"
+      style="padding: 2%"
+    >
+      <h1 style="color: #3f7d20; font-family: 'Red Hat Display', sans-serif">
+        Reportes
+      </h1>
+      <div class="table-responsive" style="width: 90%">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Hecho por</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ID</td>
+              <td>Usuario</td>
+              <td>
+                <form>
+                  <input class="form-control" type="hidden" /><a
+                    class="btn btn-primary"
+                    role="button"
+                    style="
+                      background: #3f7d20;
+                      border-color: #3f7d20;
+                      margin-right: 2%;
+                    "
+                    >Ver</a
+                  >
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+{% endblock %}

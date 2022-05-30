@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>checky</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Display&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Mono&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Text&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/Card-1.css">
+    <link rel="stylesheet" href="../../assets/css/Card.css">
+    <link rel="stylesheet" href="../../assets/css/dh-card-image-left-dark.css">
+    <link rel="stylesheet" href="../../assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="../../assets/css/Google-Style-Login.css">
+    <link rel="stylesheet" href="../../assets/css/Profile-Card.css">
+    <link rel="stylesheet" href="../../assets/css/responsive-navbar.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md py-3" style="background: #3F7D20;color: #FFFFFF;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('clases') }}"><span style="color: #FFFFFF;font-family: 'Red Hat Display', sans-serif;">Checky</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="border-color: #FFFF;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('perfil') }}" style="color: #FFFFFF;font-family: 'Red Hat Text', sans-serif;">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('notificaciones') }}" style="color: #FFFFFF;font-family: 'Red Hat Text', sans-serif;">Notificaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('reportar') }}" style="color: #FFFFFF;font-family: 'Red Hat Text', sans-serif;">Reportar un problema</a></li>
+                </ul><a class="btn btn-outline-light" role="button" href="{{ url_for('logout') }}" style="border-radius: 50px;">Cerrar sesión</a>
+            </div>
+        </div>
+    </nav>
+    <div class="d-lg-flex flex-column justify-content-lg-center align-items-lg-center">
+        <h1 style="text-align: center;margin-top: 20%;font-family: 'Red Hat Display', sans-serif;">Pasar lista</h1>
+        <form style="width: 40%;" action="iniciar_pase_lista"><button class="btn btn-primary" type="submit" style="width: 100%;background: #3F7D20;border-color: #3F7D20;border-radius: 50px;font-family: 'Red Hat Text', sans-serif;">Iniciar pase de lista</button><input class="form-control" type="hidden" name="class"></form>
+    </div>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

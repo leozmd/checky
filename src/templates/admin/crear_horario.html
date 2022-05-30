@@ -1,0 +1,63 @@
+{% extends 'admin/base_admin.html' %}
+{% block title %}Panel de administración{% endblock %}
+{% block body %}
+    <div
+      class="d-lg-flex flex-column justify-content-lg-center align-items-lg-center"
+      style="padding: 2%"
+    >
+      <h1 style="color: #3f7d20; font-family: 'Red Hat Display', sans-serif">
+        Crear horario
+      </h1>
+      <form action="crearHorario" method="post" style="width: 70%">
+        <label
+          class="form-label"
+          for="day"
+          style="font-family: 'Red Hat Text', sans-serif"
+          >Día del horario</label
+        ><select
+          class="form-select"
+          name="day"
+          style="font-family: 'Red Hat Text', sans-serif"
+          required=""
+        >
+          <optgroup label="Seleccione un día">
+            <option value="Lunes" selected="">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sábado">Sábado</option>
+            <option value="Domigo">Domingo</option>
+          </optgroup></select
+        ><label
+          class="form-label"
+          for="hour1"
+          style="font-family: 'Red Hat Text', sans-serif"
+          >Hora de inicio</label
+        ><input
+          class="form-control"
+          type="time"
+          name="hour1"
+          style="font-family: 'Red Hat Text', sans-serif"
+          required=""
+        /><label
+          class="form-label"
+          for="hour2"
+          style="font-family: 'Red Hat Text', sans-serif"
+          >Hora de fin</label
+        ><input
+          class="form-control"
+          type="time"
+          name="hour2"
+          style="font-family: 'Red Hat Text', sans-serif"
+          required=""
+        /><button
+          class="btn btn-primary"
+          type="submit"
+          style="background: #3f7d20; border-color: #3f7d20; margin-top: 2%"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+{% endblock %}

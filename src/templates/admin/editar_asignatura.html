@@ -1,0 +1,45 @@
+{% extends 'admin/base_admin.html' %}
+{% block title %}Panel de administración{% endblock %}
+{% block body %}
+    <div
+      class="d-lg-flex flex-column justify-content-lg-center align-items-lg-center"
+      style="padding: 2%"
+    >
+      <h1 style="color: #3f7d20; font-family: 'Red Hat Display', sans-serif">
+        Editar asignatura
+      </h1>
+      <form action="editarAsignatura" method="post" style="width: 70%">
+        <label
+          class="form-label"
+          for="key"
+          style="font-family: 'Red Hat Text', sans-serif"
+          >Clave de la asignatura</label
+        ><input
+          class="form-control"
+          type="text"
+          name="key"
+          maxlength="10"
+          required=""
+          style="font-family: 'Red Hat Text', sans-serif"
+        /><label
+          class="form-label"
+          for="name"
+          style="font-family: 'Red Hat Text', sans-serif"
+          >Nombre de la asignatura</label
+        ><input
+          class="form-control"
+          type="text"
+          name="name"
+          required=""
+          maxlength="45"
+          style="font-family: 'Red Hat Text', sans-serif"
+        /><button
+          class="btn btn-primary"
+          type="submit"
+          style="background: #3f7d20; border-color: #3f7d20; margin-top: 2%"
+        >
+          Enviar</button
+        ><input class="form-control" type="hidden" />
+      </form>
+    </div>
+{% endblock %}
