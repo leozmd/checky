@@ -40,6 +40,35 @@ class ModelUser():
             sql = "SELECT * FROM MUsuario"
             cursor.execute(sql)
             data = cursor.fetchall()
-            return data
+            if data != None:
+                return data
+            else:
+                return None
+        except Exception as ex:
+            raise Exception(ex)
+
+    @classmethod
+    def create(self, db, user):
+        try:
+            cursor = db.connection.cursor()
+            sql = "call PCrearUsuario()"
+            cursor.execute(sql)
+        except Exception as ex:
+            raise Exception(ex)
+
+    @classmethod
+    def update(self, db, user):
+        try:
+            cursor = db.connection.cursor()
+            sql = "call ActualizarUsuario()"
+            cursor.execute(sql)
+        except Exception as ex:
+            raise Exception(ex)
+
+    def delete(self, db, idUsuario):
+        try:
+            cursor = db.connection.cursor()
+            sql = "call EliminarUsuario()"
+            cursor.execute(sql)
         except Exception as ex:
             raise Exception(ex)

@@ -202,9 +202,9 @@ def editarHorario(idHorario):
 def editarTurno(idTurno):
     return render_template("admin/editar_turno.html")
 
-@app.route('admin/asignaturas/editar/<int:idUsuario>')
+@app.route('admin/usuarios/editar/<int:idUsuario>')
 @login_required
-def editarAsignatura(idUsuario):
+def editarUsuario(idUsuario):
     return render_template("admin/editar_usuario.html")
 
 # Método para error 404 (Not Found)
